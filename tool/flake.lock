@@ -1,0 +1,118 @@
+{
+  "nodes": {
+    "devshell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788342953,
+        "narHash": "sha256-EWkNM4JzBhZ/Yn1PG6lP4/QJuFAFeHYlY5gVxXu940Y=",
+        "ref": "main",
+        "rev": "a67c0f87b63bcbdbdcb56785bec0205a2e3d6026",
+        "revCount": 362,
+        "type": "git",
+        "url": "https://github.com/numtide/devshell.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "https://github.com/numtide/devshell.git"
+      }
+    },
+    "elfmt": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790656311,
+        "narHash": "sha256-rOQqrM6p+k3q08Hab9a/kL7vNhdI9jSp1tmzjwZj9Lw=",
+        "ref": "main",
+        "rev": "ed9bb427be1efcd4232bb5f82dc845dd2c2ac029",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://github.com/brsvh/emacs-elfmt.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "https://github.com/brsvh/emacs-elfmt.git"
+      }
+    },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788450739,
+        "narHash": "sha256-glZLQlzIn1fXH6PazR2iUmTo7kzzyYSshrWhLS9TqCU=",
+        "ref": "main",
+        "rev": "31729ca8cbdb4fa927b34e5f4353e6a83f39e993",
+        "revCount": 494,
+        "type": "git",
+        "url": "https://github.com/hercules-ci/flake-parts.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "https://github.com/hercules-ci/flake-parts.git"
+      }
+    },
+    "infix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1785945928,
+        "narHash": "sha256-4dLAgs76p3oKmEcns0qpLlaD7wtKccZSSMFUM1PbCaA=",
+        "ref": "main",
+        "rev": "08548b51d9ae6582bea634eecbd4090317c2ff84",
+        "revCount": 145,
+        "type": "git",
+        "url": "https://github.com/brsvh/infix.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "https://github.com/brsvh/infix.git"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1792842277,
+        "narHash": "sha256-pGPnZGi8y9d76xNeracniXO3dsYVROEmMkMc8jD0Ihc=",
+        "ref": "nixpkgs-unstable",
+        "rev": "d3b13ad75cc492690728f9307e443dec9ef9a20e",
+        "revCount": 1100901,
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs.git"
+      },
+      "original": {
+        "ref": "nixpkgs-unstable",
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs.git"
+      }
+    },
+    "root": {
+      "inputs": {
+        "devshell": "devshell",
+        "elfmt": "elfmt",
+        "flake-parts": "flake-parts",
+        "infix": "infix",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
