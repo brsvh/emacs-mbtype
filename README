@@ -17,9 +17,9 @@ this file.  If not, see <https://www.gnu.org/licenses/>.
 * mbtype
 
 Emacs typography for [[https://mbtype.com][MB Type Library fonts]].
-Font support is not implemented yet.
+Requires Emacs 29.1 or later.
 
-** Getting Started
+** Installation
 
 Purchase and install the MB Type fonts you want to use.
 
@@ -31,6 +31,8 @@ Add ~src/~ to ~load-path~:
 #+end_src
 
 *** Nix
+
+Run ~nix run . -- -Q~ for an Emacs with MBType available.
 
 Build with ~nix build~.  For an Emacs installation, apply ~overlays.default~
 to Nixpkgs and include ~mbtype~:
