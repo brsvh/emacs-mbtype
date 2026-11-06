@@ -117,10 +117,22 @@
 
         perSystem =
           {
+            lib,
             pkgs,
             system,
             ...
           }:
+          let
+            inherit (lib)
+              getExe
+              ;
+
+            emacsPackages = pkgs.emacsPackagesFor pkgs.emacs;
+
+            emacs = emacsPackages.emacsWithPackages (epkgs: [
+              epkgs.mbtype
+            ]);
+          in
           {
             _module = {
               args = {
@@ -136,9 +148,24 @@
               };
             };
 
+            apps = {
+              default = {
+                type = "app";
+
+                program = getExe (
+                  pkgs.writeShellScriptBin "emacs-mbtype" ''
+                    # Make the packaged libraries available with -Q.
+                    exec ${getExe emacs} \
+                      --load ${emacs.deps}/share/emacs/site-lisp/subdirs.el \
+                      "$@"
+                  ''
+                );
+              };
+            };
+
             packages = rec {
               default = mbtype;
-              mbtype = (pkgs.emacsPackagesFor pkgs.emacs).mbtype;
+              mbtype = emacsPackages.mbtype;
             };
           };
 
