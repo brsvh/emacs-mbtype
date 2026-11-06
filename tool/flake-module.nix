@@ -4,8 +4,10 @@
 }:
 let
   inherit (inputs)
+    chinese-fonts-overlay
     elfmt
     infix
+    nixpkgs
     ;
 in
 {
@@ -21,6 +23,25 @@ in
       system,
       ...
     }:
+    let
+      inherit (lib)
+        getName
+        ;
+
+      fontPkgs = import nixpkgs {
+        inherit
+          system
+          ;
+
+        config = {
+          allowUnfreePredicate = pkg: getName pkg == "tsangertype-tsangerxuansan";
+        };
+
+        overlays = [
+          chinese-fonts-overlay.overlays.default
+        ];
+      };
+    in
     {
       devshells = {
         default = import ./devshells/default.nix {
@@ -30,6 +51,12 @@ in
             ;
 
           elfmt = elfmt.packages.${system}.elfmt;
+
+          fonts = with fontPkgs; [
+            lxgw-wenkai
+            lxgwPackages.neo-zhisong
+            tsangertypePackages.tsangerxuansan
+          ];
         };
       };
 

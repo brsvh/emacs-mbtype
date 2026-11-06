@@ -1,5 +1,6 @@
 {
   elfmt,
+  fonts,
   lib,
   pkgs,
   ...
@@ -32,6 +33,13 @@ let
   ];
 in
 {
+  env = [
+    {
+      name = "FONTCONFIG_FILE";
+      value = pkgs.makeFontsConf { fontDirectories = fonts; };
+    }
+  ];
+
   files = {
     editorconfig = rec {
       data = {

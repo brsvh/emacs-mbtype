@@ -1,5 +1,15 @@
 {
   inputs = {
+    chinese-fonts-overlay = {
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+
+      url = "git+https://github.com/brsvh/chinese-fonts-overlay.git?ref=main";
+    };
+
     devshell = {
       inputs = {
         nixpkgs = {

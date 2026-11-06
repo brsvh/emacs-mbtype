@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "chinese-fonts-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793076048,
+        "narHash": "sha256-KCHqMuOCjJu/jnTYXaFiJpZq8rNdcSbUmD4YlmxghL4=",
+        "ref": "main",
+        "rev": "961c53595035ee50656c17e3b36e653ac5601b9e",
+        "revCount": 198,
+        "type": "git",
+        "url": "https://github.com/brsvh/chinese-fonts-overlay.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "https://github.com/brsvh/chinese-fonts-overlay.git"
+      }
+    },
     "devshell": {
       "inputs": {
         "nixpkgs": [
@@ -105,6 +126,7 @@
     },
     "root": {
       "inputs": {
+        "chinese-fonts-overlay": "chinese-fonts-overlay",
         "devshell": "devshell",
         "elfmt": "elfmt",
         "flake-parts": "flake-parts",
