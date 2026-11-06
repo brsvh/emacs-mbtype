@@ -1,0 +1,190 @@
+#+title: Reading room — Éditions, Wörter, λέξεις, слова
+#+subtitle: European prose and code specimens
+#+language: en
+#+startup: showall
+#+todo: TODO(t) NEXT(n) WAIT(w) | DONE(d) CANCELLED(c)
+#+property: header-args :eval never
+
+#+begin_comment
+Copyright (C) 2026 Bingshan Chang
+SPDX-License-Identifier: GPL-3.0-or-later
+#+end_comment
+
+Open alongside [[file:example-europe.el][the code specimen]].  These are display samples;
+font coverage and visual quality must be checked in the current frame.
+
+* A morning in the reading room                              :prose:latin:
+:PROPERTIES:
+:CUSTOM_ID: reading-room
+:END:
+
+Éloïse opens a book beside the window.  Jörg checks the table of contents,
+Íñigo writes a note, and Małgorzata marks a passage.  A narrow column should
+still make the accents, punctuation, and word spaces easy to distinguish.
+
+This longer paragraph mixes names and ordinary words: François, Anaïs,
+Søren, Þóra, Łukasz, Dvořák, Iğdır, and Rīga.  It also keeps inline code
+~reader.open("café")~ and a literal path =notes/über-größe.txt= inside prose.
+Resize the window to compare wrapping around these spans and around
+[[#style-sheet][a link whose description contains naïve, cœur, and smörgås]].
+
+** À l'étage — accents and small details
+
+French: À la fenêtre, Éloïse relit une page sur la lumière et les couleurs.
+German: Jörg öffnet das Buch; draußen fällt leise der nächste Schnee.
+Spanish: Íñigo dejó una nota: «La próxima página empieza aquí».
+Portuguese: João lê a edição nova e escreve uma observação na margem.
+Italian: La città è quieta; una pagina racconta perché il viaggio finì.
+
+*** Å, Æ, Ø — northern letters
+
+Swedish: Åsa läser en bok om öar, vägar och små trädgårdar.
+Danish: På bordet står en skål med blåbær og et åbent hæfte.
+Norwegian: På øya er det stille, og døra står på gløtt.
+Icelandic: Þóra les bók við gluggann.  Úti er bjart og hlýtt.
+Finnish: Yöllä näkyy tähtiä, ja pöydällä on pieni kirja.
+
+**** Dŵr, tŷ, fáilte — fourth-level heading
+
+Welsh letters: Ŵ Ŷ ŵ ŷ; dŵr, tŷ.  Irish vowels: Á É Í Ó Ú; fáilte,
+léamh, scríobh.  These short words expose accents even in small headings.
+
+* TODO [#A] Compare text styles [2/4]                       :faces:review:
+SCHEDULED: <2026-11-05 Thu> DEADLINE: <2026-11-12 Thu>
+:PROPERTIES:
+:CUSTOM_ID: style-sheet
+:OWNER:    Éloïse Noël
+:EFFORT:   0:25
+:END:
+
+The rows repeat the same text in several Org markup forms.
+
+- Regular: À côté, œuvre, Straße, Łódź, őr, țară.
+- Bold: *À côté, œuvre, Straße, Łódź, őr, țară.*
+- Italic: /À côté, œuvre, Straße, Łódź, őr, țară./
+- Nested markup: */À côté, œuvre, Straße, Łódź, őr, țară./*
+- Underline: _À côté, œuvre, Straße, Łódź, őr, țară._
+- Strike-through: +À côté, œuvre, Straße, Łódź, őr, țară.+
+- Code: ~À côté, œuvre, Straße, Łódź, őr, țară.~
+- Verbatim: =À côté, œuvre, Straße, Łódź, őr, țară.=
+
+- Regular: Αθήνα, λέξη, ΐ, ΰ; Київ, ґанок, їжак.
+- Bold: *Αθήνα, λέξη, ΐ, ΰ; Київ, ґанок, їжак.*
+- Italic: /Αθήνα, λέξη, ΐ, ΰ; Київ, ґанок, їжак./
+- Nested markup: */Αθήνα, λέξη, ΐ, ΰ; Київ, ґанок, їжак./*
+- Code: ~Αθήνα, λέξη, ΐ, ΰ; Київ, ґанок, їжак.~
+
+- [X] Read ordinary text at the current size.
+- [X] Compare the same words in code and prose.
+- [-] Inspect the remaining details.
+  - [X] Accents above capitals: É Å Ő İ.
+  - [ ] Marks below letters: ç ș ț ą ę.
+- [ ] Repeat in a second frame with a different text size.
+
+** NEXT Mixed alphabets and punctuation                      :coverage:
+
+Polish: Łukasz czyta książkę przy oknie; śnieg leży na ścieżce.
+Czech: Tichá místnost, otevřená kniha a čerstvý čaj.
+Slovak: Ľudia čítajú pri okne; stôl má dĺžku dva metre.
+Hungarian: Az erdő fölött felhők gyűlnek, a szobában csend van.
+Romanian: În cameră este liniște; pe masă se află o carte.
+Turkish: Iğdır ve İzmir: büyük İ, küçük i; büyük I, küçük ı.
+
+Greek: Η Ελένη διαβάζει ένα βιβλίο κοντά στο παράθυρο.
+Ukrainian: Ірина читає книжку біля вікна; надворі тихо.
+Russian: На столе лежат книга, тетрадь и карандаш.
+Bulgarian: На масата има книга и чаша чай.
+Serbian: Љиљана чита књигу; Ђорђе пише белешку.
+
+** WAIT Composition and spacing
+:LOGBOOK:
+- Note taken on [2026-11-05 Thu 09:30] \\
+  Compare complete words as well as isolated letters.
+:END:
+
+Precomposed / decomposed pairs contain different code-point sequences:
+=é / é=, =å / å=, =č / č=, =ά / ά=, and =ї / ї=.
+Compare both forms in *é é å å* and /é é å å/ without editing them.
+
+Spaces: =A B= (ordinary), =A B= (nonbreaking), =A B= (narrow nonbreaking).
+Prices: 12,50 €; 1 234,56 €; £18.00; 25 CHF.  Quotes and dashes:
+“English”, « français », „Deutsch“, ‘single’; hyphen -, en –, em —, minus −.
+
+* Tables, lists, and fixed-width content                    :alignment:
+
+These are ordinary Org tables, with no SVG replacement.
+
+| Language  | Word   | Uppercase | Pages | Price    |
+|-----------+--------+-----------+-------+----------|
+| French    | œuvre  | ŒUVRE     |   128 | 12,50 €  |
+| German    | Straße | STRAẞE    |    96 | 18,00 €  |
+| Polish    | źródło | ŹRÓDŁO    |    88 | 42,00 zł |
+| Hungarian | gyűrű  | GYŰRŰ     |   112 | 3 200 Ft |
+| Greek     | λέξη   | ΛΕΞΗ      |   120 | 10,00 €  |
+| Ukrainian | їжак   | ЇЖАК      |   104 | 250,00 ₴ |
+|-----------+--------+-----------+-------+----------|
+| Total     |        |           |   648 |          |
+#+TBLFM: @8$4=vsum(@2$4..@7$4)
+
+1. Read the plain paragraph.
+2. Compare the table at the same size.
+   1. Check the left and right boundaries.
+   2. Check accents near the row above.
+3. Move point through =é= one character at a time.
+
+- Ligatures :: fi fl ffi ffl; office, affine, difficile, flamme.
+- Similar shapes :: Il1|, O0Q, rn/m, vv/w, 8/B, 5/S, 2/Z.
+- Math :: α + β = γ; x² + y²; √2 ≈ 1.414; 0 ≤ n < 10; ∑ xᵢ.
+- Arrows :: ← → ↔ ⇐ ⇒ ⇔; plain code uses ~->~, ~=>~, ~<=~, ~!=~.
+
+#+begin_example
+0123456789 0123456789 0123456789 0123456789
+Il1|Il1|Il O0QO0QO0Q0 rnmwrnmwrn fiflffiffl
+café       Straße     Łódź       Αθήνα
+naïve      Größe      Rīga       Київ
+#+end_example
+
+* Source blocks and quotations                                   :code:
+
+#+name: catalogue-label
+#+begin_src emacs-lisp
+(let ((titre "À l'étage")
+      (auteur "Éloïse Noël")
+      (πόλη "Αθήνα"))
+  ;; Keep punctuation, diacritics, and the original case.
+  (format "%s — %s (%s)" auteur titre πόλη))
+#+end_src
+
+#+begin_src python
+from dataclasses import dataclass
+
+@dataclass(frozen=True)
+class Entry:
+    title: str
+    author: str
+    pages: int
+
+def résumé(entries: list[Entry]) -> dict[str, int]:
+    """Keep titles such as 'Über Größe' and 'Київ' intact."""
+    return {entry.title: entry.pages for entry in entries}
+#+end_src
+
+#+begin_quote
+Éloïse closes the notebook.  The next reader leaves a short note:
+« Même texte, autre lumière. »  The words remain unchanged.[fn:light]
+#+end_quote
+
+#+begin_verse
+À la fenêtre, une page.
+På bordet, en bok.
+Στο τραπέζι, ένα βιβλίο.
+На столі — книжка.
+#+end_verse
+
+** DONE Symbols and sequences                                    :emoji:
+CLOSED: [2026-11-05 Thu 10:00]
+
+Plain symbols: © ® ™ § ¶ † ‡ • · … ‰.  Emoji: 📚 ☕ 🧭.
+Sequences: 👩‍💻 👩🏽‍💻 👨‍👩‍👧‍👦 🇪🇺.  Text/emoji presentation: ♥︎ / ♥️.
+
+[fn:light] A short footnote with *œuvre*, /Straße/, =café=, and ~λέξη~.

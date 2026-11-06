@@ -1,0 +1,206 @@
+#+title: Reading room — 书店・図書室・도서관
+#+subtitle: Chinese, Japanese, and Korean prose specimens
+#+language: en
+#+startup: showall
+#+todo: TODO(t) NEXT(n) WAIT(w) | DONE(d) CANCELLED(c)
+#+property: header-args :eval never
+
+#+begin_comment
+Copyright (C) 2026 Bingshan Chang
+SPDX-License-Identifier: GPL-3.0-or-later
+#+end_comment
+
+Open alongside [[file:example-cjk.el][the code specimen]].  Language labels do not select fonts.
+The repeated Han characters expose the active regional font preference.
+
+* A shared reading room — 中文・日本語・한국어                  :prose:cjk:
+:PROPERTIES:
+:CUSTOM_ID: reading-room
+:END:
+
+清晨的书店还没有开门，窗边放着一本新书。读者翻到第 12 页，
+在页边写下「字形、标点与留白」，然后比较正文与 ~code_0123~。
+同一段落还包含 Latin words、数字 0123456789 和比例 0.94。
+
+午後的圖書館很安靜，窗邊放著一本舊書。讀者寫下《閱讀與記憶》，
+又在筆記中加入 =src/排版.el=。調整視窗寬度，觀察書名號、逗號、
+句號與英文單字在換行處的排列。
+
+雨の日、図書室の窓のそばで本を読む。ページの余白には
+「文字の形と約物の間隔」と書いてある。~buffer-name~ や
+=notes/読書.org= のような英字の部分も、同じ行に並べてみる。
+
+비 오는 날, 창가에서 책을 읽고 짧은 메모를 남긴다. 본문 안에
+~font-at~ 함수 이름과 =notes/독서.txt= 경로를 넣고, 한글과
+Latin text 사이의 간격을 살펴본다. 페이지 번호는 12이다.
+
+** 中文 — 简体、繁體、注音
+
+简体：汉字、书籍、国家、云层、门窗、字体。
+繁體：漢字、書籍、國家、雲層、門窗、字體。
+注音：ㄅ ㄆ ㄇ ㄈ ㄉ ㄊ ㄋ ㄌ；ㄓㄨㄥ ㄨㄣˊ。
+
+*** 日本語 — かな・カタカナ・漢字
+
+ひらがな：あいうえお、かきくけこ、さしすせそ。
+カタカナ：アイウエオ、カキクケコ、サシスセソ。
+小書き：ぁぃぅぇぉっゃゅょ、ァィゥェォッャュョ。
+濁点・半濁点：がぎぐげご、ぱぴぷぺぽ、ガギグゲゴ。
+長音・中点：コーヒー・ノート・ページ。踊り字：時々、すゝめ。
+半角：ｶﾀｶﾅ、ｶﾞｷﾞｸﾞｹﾞｺﾞ、ﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟ。
+
+**** 한국어 — 받침・한자・mixed text
+
+한글：가 나 다 라 마 바 사 아 자 차 카 타 파 하。
+받침：각 간 갇 갈 감 갑 값 갓 강；읽다、앉다、없다。
+쌍자음：까 따 빠 싸 짜；꺼 떠 뻐 써 쩌。
+한자：韓國、文字、圖書館、學校；한글과 漢字를 함께 읽기。
+
+* TODO [#A] Styles — 强调・強調・강조 [1/3]                   :faces:review:
+SCHEDULED: <2026-11-05 Thu> DEADLINE: <2026-11-12 Thu>
+:PROPERTIES:
+:CUSTOM_ID: styles
+:OWNER:    林晓 / 佐藤葵 / 김하늘
+:EFFORT:   0:30
+:END:
+
+The same phrases appear in each style.  CJK emphasis and Latin italic
+should be inspected separately; this file does not install any face rules.
+
+- Regular: 阅读与记忆 — Equity; 閱讀與記憶 — Equity.
+- Bold: *阅读与记忆 — Equity; 閱讀與記憶 — Equity.*
+- Italic: /阅读与记忆 — Equity; 閱讀與記憶 — Equity./
+- Nested markup: */阅读与记忆 — Equity; 閱讀與記憶 — Equity./*
+- Underline: _阅读与记忆 — Equity; 閱讀與記憶 — Equity._
+- Strike-through: +阅读与记忆 — Equity; 閱讀與記憶 — Equity.+
+- Code: ~阅读与记忆 — Triplicate; 閱讀與記憶 — Triplicate.~
+- Verbatim: =阅读与记忆 — Triplicate; 閱讀與記憶 — Triplicate.=
+
+- Regular: 文字と余白 — Equity; 글자와 여백 — Equity.
+- Bold: *文字と余白 — Equity; 글자와 여백 — Equity.*
+- Italic: /文字と余白 — Equity; 글자와 여백 — Equity./
+- Nested markup: */文字と余白 — Equity; 글자와 여백 — Equity./*
+- Code: ~文字と余白 — Triplicate; 글자와 여백 — Triplicate.~
+- Verbatim: =文字と余白 — Triplicate; 글자와 여백 — Triplicate.=
+
+- [X] Read all three scripts at the current size.
+- [-] Compare emphasis and ordinary text.
+  - [X] Inspect Latin italic beside CJK characters.
+  - [ ] Inspect the font used for each emphasized script.
+- [ ] Compare the same buffer in frames with different text sizes.
+
+** NEXT Shared Han and regional forms                            :han:
+
+Chinese context: 骨 直 令 返 辻 葛 曜 海 道 羽 雨 雪。
+Japanese context: 骨 直 令 返 辻 葛 曜 海 道 羽 雨 雪。
+Korean context: 骨 直 令 返 辻 葛 曜 海 道 羽 雨 雪。
+
+All three rows contain the same Han code points.  A frame-wide priority
+normally gives them the same font; the labels do not request local variants.
+Compare these rows after changing the actual font configuration.
+
+Different code points: =高 / 髙=, =崎 / 﨑=, =吉 / 𠮷=.
+Rare characters: 𠮷 (U+20BB7), 𠀀 (U+20000).
+Variation selector: =辻 / 辻󠄀=; the second form adds U+E0100.
+These are coverage samples, not a promise that every font supports them.
+
+** WAIT Composition, punctuation, and spacing                     :width:
+:LOGBOOK:
+- Note taken on [2026-11-05 Thu 09:45] \\
+  Keep original code points when comparing glyphs.
+:END:
+
+Precomposed / decomposed pairs: =が / が=, =パ / パ=,
+=한 / 한=, and =글 / 글=.  Also compare *が が 한 한*
+and /が が 한 한/ in running prose.
+
+Chinese punctuation: ，。！？；：、“双引号”‘单引号’（括号）【项目】《书名》。
+Japanese punctuation: 「引用」『書名』【項目】〔補足〕・ー〜…。
+Korean punctuation: “인용” ‘강조’ (메모) [항목] · … —.
+Fullwidth: ＡＢＣ ａｂｃ ０１２３ ＋－＝ ％ ＆ ＠ ＃ ￥１００。
+ASCII: ABC abc 0123 +-*/= % & @ #; brackets [] {} (); path src/mbtype.el.
+
+Currency and units: ¥100、￥１００、₩12,000、€12.50、18 px、0.94×。
+Boundaries: foo中文bar / foo日本語bar / foo한국어bar.
+Spaces: =A B= (ordinary), =A　B= (ideographic U+3000).
+
+* Tables and lists — 表格・表・표                              :alignment:
+
+These are ordinary Org tables.  Their alignment does not depend on SVG.
+
+| Language | Title          | Shelf | Pages | Status  |
+|----------+----------------+-------+-------+---------|
+| 中文     | 雨后的书店     | A-03  |   128 | 阅读中  |
+| 繁體     | 午後的圖書館   | B-12  |    96 | 待讀    |
+| 日本語   | 雨の日の図書室 | C-07  |   144 | 読書中  |
+| 한국어   | 비 오는 도서관 | D-21  |   112 | 읽는 중 |
+|----------+----------------+-------+-------+---------|
+| Total    |                |       |   480 |         |
+#+TBLFM: @6$4=vsum(@2$4..@5$4)
+
+| Form     | Ordinary     | Emphasis       | Inline code    |
+|----------+--------------+----------------+----------------|
+| Chinese  | 字形与标点   | *字形与标点*   | ~字形与标点~   |
+| Japanese | 文字と約物   | /文字と約物/   | ~文字と約物~   |
+| Korean   | 글자와 문장  | *글자와 문장*  | ~글자와 문장~  |
+| Mixed    | item_12 中文 | /item_12 中文/ | =item_12 中文= |
+
+1. 中文：比较汉字、数字与 ASCII 标点。
+2. 日本語：漢字、かな、カタカナを比べる。
+   1. 濁点と半濁点を読む。
+   2. 長音と中点の間隔を見る。
+3. 한국어: 한글, 한자, 숫자를 함께 읽는다.
+
+- 中文 :: 正文、标题、行内代码、原始文本表格。
+- 日本語 :: 本文、見出し、インラインコード、表。
+- 한국어 :: 본문, 제목, 인라인 코드, 표.
+
+#+begin_example
+|ABCD|中文|かな|한글|1234|
+|1234|漢字|カナ|독서|ABCD|
+|A中B|AあB|A한B|１２|x==y|
++----+----+----+----+----+
+#+end_example
+
+Each cell above has four nominal columns.  Actual pixel advances may differ.
+
+* Source blocks and quotations                                    :code:
+
+#+name: multilingual-label
+#+begin_src emacs-lisp
+(let ((書名 "雨の日の図書室")
+      (作者 "佐藤葵")
+      (쪽수 144))
+  ;; 中文注释、日本語の注釈、한국어 주석。
+  (format "%s — %s (%d pp.)" 作者 書名 쪽수))
+#+end_src
+
+#+begin_src python
+def label(書名: str, 作者: str, 쪽수: int) -> str:
+    """Keep 中文、日本語、한국어 and Latin text together."""
+    if 쪽수 < 0:
+        raise ValueError("页数 / ページ数 / 쪽수")
+    return f"{作者} — {書名}: {쪽수}"
+#+end_src
+
+#+begin_quote
+书页上的字没有改变，改变的是阅读时的光线。
+ページの文字は変わらず、読むときの光だけが変わる。
+책의 글자는 그대로이고, 읽을 때의 빛만 달라진다。[fn:margin]
+#+end_quote
+
+#+begin_verse
+窗边，一本书。
+窓辺に、一冊の本。
+창가에, 책 한 권.
+#+end_verse
+
+** DONE Symbols and sequences                                    :emoji:
+CLOSED: [2026-11-05 Thu 10:15]
+
+Arrows and math: → ← ↔ ⇒ ≤ ≥ ≠ × ÷ ± √ ∑ ∞.
+Shapes: □ ■ ○ ● △ ▲ ◇ ◆.  Emoji beside text: 中文📚 日本語☕ 한국어🧭.
+Sequences: 👩‍💻 👩🏽‍💻 👨‍👩‍👧‍👦 🇨🇳 🇯🇵 🇰🇷.
+Text/emoji presentation: ♥︎ / ♥️.  Compare their height with the line above.
+
+[fn:margin] A margin note with *中文*, /日本語/, =한국어=, and ~code_12~.
