@@ -1,4 +1,4 @@
-;;; Directory Local Variables            -*- no-byte-compile: t -*-
+;;; Directory Local Variables -*- lexical-binding: t; no-byte-compile: t -*-
 ;;; For more information see (info "(emacs) Directory Variables")
 
 ((emacs-lisp-mode
